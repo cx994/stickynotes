@@ -1,0 +1,211 @@
+:root {
+  font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  font-size: 14px;
+  color: #1f1f1f;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+body {
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#app {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
+}
+
+#app::-webkit-scrollbar {
+  width: 10px;
+}
+
+#app::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#app::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.16);
+  border: 3px solid transparent;
+  border-radius: 5px;
+  background-clip: content-box;
+}
+
+button {
+  font: inherit;
+  appearance: none;
+}
+
+.history {
+  padding: 2px 18px 28px;
+}
+
+.history-day {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 14px 2px 8px;
+  border-bottom: 1px solid #ededed;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+}
+
+.history-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.history-dot {
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.history-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: 11px;
+}
+
+.history-kind {
+  color: #666;
+}
+
+.history-time {
+  color: #aaa;
+}
+
+.history-text {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.history-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.history-todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.history-todo-box {
+  flex: 0 0 11px;
+  margin-top: 2px;
+  color: #999;
+}
+
+.history-todo-item.done .history-todo-box {
+  color: #9a9a9a;
+}
+
+.history-todo-item.done .history-todo-text {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.history-todo-text {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.history-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding-top: 1px;
+}
+
+.history-action {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 5px;
+  background: none;
+  color: #888;
+  cursor: pointer;
+}
+
+.history-action:hover {
+  background: #f2f2f2;
+  color: #333;
+}
+
+.history-action.danger {
+  color: #aaa;
+}
+
+.history-action.danger:hover {
+  background: #fdecea;
+  color: #c0392b;
+}
+
+.history-empty {
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.history-empty-icon {
+  color: #c8c8c8;
+  margin-bottom: 2px;
+}
+
+.history-empty-title {
+  font-size: 14px;
+  color: #888;
+}
+
+.history-empty-sub {
+  font-size: 12px;
+  color: #b0b0b0;
+}
